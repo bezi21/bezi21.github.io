@@ -11,6 +11,8 @@ function Projects() {
     {
       title: 'Personal Portfolio Website',
       tech: 'React, CSS',
+
+      
       description: 'A professional website showcasing my skills and projects.',
       icon: 'fa-user'
     },
@@ -27,8 +29,8 @@ function Projects() {
       <div className="container">
         <h2 className="section-title">My Projects</h2>
         <div className="projects-grid">
-          {projects.map((project, index) => (
-            <div className="project-card" key={index}>
+          {projects.map((project, index) => ( 
+            <div className="project-card" key={index}>  
               <div className="project-icon">
                 <i className={`fas ${project.icon}`}></i>
               </div>
