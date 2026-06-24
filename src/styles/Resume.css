@@ -1,0 +1,425 @@
+/* ===== RESUME SECTION ===== */
+.resume {
+  flex: 1;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #1a1a2e;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  font-weight: 700;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #4a90e2, #357abd);
+  border-radius: 2px;
+}
+
+.resume-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ===== RESUME SECTIONS ===== */
+.resume-section {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+}
+
+.resume-section h3 {
+  font-size: 1.5rem;
+  color: #1a1a2e;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.resume-section h3 i {
+  color: #4a90e2;
+}
+
+/* ===== RESUME ITEMS ===== */
+.resume-item {
+  padding: 20px;
+  border-left: 4px solid #4a90e2;
+  margin-bottom: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.resume-item:last-child {
+  margin-bottom: 0;
+}
+
+.resume-item:hover {
+  background: #f0f4f8;
+  transform: translateX(5px);
+}
+
+.resume-item h4 {
+  font-size: 1.1rem;
+  color: #1a1a2e;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.resume-item .institution {
+  color: #4a90e2;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.resume-item .date {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 5px 0 10px 0;
+}
+
+.resume-item .description {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.responsibilities {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.responsibilities li {
+  padding: 5px 0 5px 25px;
+  position: relative;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.responsibilities li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #4a90e2;
+  font-weight: bold;
+}
+
+/* ===== CERTIFICATE ITEMS ===== */
+.certificate-item {
+  padding: 0;
+  overflow: hidden;
+  border-left: 4px solid #4a90e2;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.certificate-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+}
+
+.certificate-info {
+  flex: 1;
+}
+
+.certificate-info h4 {
+  font-size: 1.1rem;
+  color: #1a1a2e;
+  margin-bottom: 3px;
+}
+
+.certificate-info .institution {
+  color: #4a90e2;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.certificate-info .date {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 3px 0 0 0;
+}
+
+.certificate-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-view-cert {
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-view-cert:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+/* ===== CERTIFICATE PREVIEW ===== */
+.certificate-preview {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.certificate-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.certificate-preview:hover .certificate-image {
+  transform: scale(1.05);
+}
+
+.certificate-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.certificate-preview:hover .certificate-overlay {
+  opacity: 1;
+}
+
+.btn-expand {
+  background: white;
+  color: #1a1a2e;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-expand:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-expand i {
+  font-size: 1rem;
+}
+
+/* ===== DOWNLOAD BUTTON ===== */
+.resume-download {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-download {
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 20px rgba(74, 144, 226, 0.3);
+}
+
+.btn-download:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(74, 144, 226, 0.4);
+}
+
+.btn-download i {
+  font-size: 1.2rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .resume {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .resume-section {
+    padding: 20px;
+  }
+
+  .certificate-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .certificate-actions {
+    width: 100%;
+  }
+
+  .btn-view-cert {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .certificate-preview {
+    height: 150px;
+  }
+
+  .btn-expand {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+
+  .resume-item {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .resume-section {
+    padding: 15px;
+  }
+
+  .resume-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .resume-item h4 {
+    font-size: 1rem;
+  }
+
+  .certificate-preview {
+    height: 120px;
+  }
+
+  .certificate-info h4 {
+    font-size: 1rem;
+  }
+
+  .btn-expand {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+
+  .btn-download {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    width: 100%;
+    justify-content: center;
+  }
+}/* Add to your existing Resume.css */
+
+/* ===== INTERNSHIP CERTIFICATE ===== */
+.resume-section .achievement-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 193, 7, 0.15));
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #b8860b;
+}
+
+.resume-section .achievement-badge i {
+  color: #ffd700;
+  font-size: 1rem;
+}
+
+.resume-section .achievement-badge span {
+  color: #8b7500;
+}
+
+/* Certificate badge */
+.cert-badge {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 2px 12px;
+  background: #4a90e2;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Certificate item spacing */
+.certificate-item {
+  padding: 0;
+  overflow: hidden;
+  border-left: 4px solid #4a90e2;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
