@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Skills from './pages/Skills';
-import Projects from './pages/Projects';
+import Projects from './pages/projects';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 
