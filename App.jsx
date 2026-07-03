@@ -12,7 +12,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
-import Services from './pages/Services';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 
